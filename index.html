@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/IMG_20210504_093228_559.webp" alt="">
+        </div>
+        <div class="form">
+            <form action="adicionar_funcionario.php" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastro</h1>
+                    </div>
+                    <div class="login-button">
+                        <label class="picture" tabindex="0">
+                            <input type="file" accept="image/*" class="picture__input" />
+                            <span class="picture__image">Foto de perfil</span>
+                            <img class="picture__img" src="assets/img/undraw_Pic_profile_re_7g2h.png">
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nome">Nome completo</label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="celular">Telefone Nº</label>
+                        <input id="celular" type="text" name="celular" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="data">Data de Nascimento</label>
+                        <input id="data" type="date" name="data" placeholder="Digite sua data de nascimento" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="endereco">Endereço</label>
+                        <input id="endereco" type="text" name="endereco" placeholder="Digite seu endereço" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cep">CEP</label>
+                        <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="numero">Nº</label>
+                        <input id="numero" type="text" name="numero" placeholder="Digite o número da sua casa" required>
+                    </div>
+
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="feminino" type="radio" name="genero" value="Feminino">
+                            <label for="feminino">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="masculino" type="radio" name="genero" value="Masculino">
+                            <label for="masculino">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="outros" type="radio" name="genero" value="Outros">
+                            <label for="outros">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="nao-dizer" type="radio" name="genero" value="Prefiro não dizer">
+                            <label for="nao-dizer">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- Adicionei o atributo 'action' no '<form>' apontando para o arquivo "adcionar_funcionario.php" porque esse vai ser o script PHP responsável por receber os dados 
+    do formulario e adicionar a função python para adicionar as informações ao arquivo excell -->
+
+<!-- Também alterei os valores do atributo 'src' das imagens para referenciar corretamente os arquivos de imagem -->
+
+<!-- Ajustei os atributos 'name' dos campos do formulario pra corresponder aos nomes que vão ser utilizados no script PHP -->
